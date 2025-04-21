@@ -1,0 +1,171 @@
+/* make body full-height and use flex layout */
+html, body {
+  height: 100%;
+  margin: 5;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Tahoma', sans-serif;
+  color: #EBE9E9;
+  background: #424242;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #424242;
+  margin: 0 0 20px;
+  font-family: 'Tahoma', sans-serif;
+  text-align: center;
+  background: #aed8e6;
+  padding: 5px
+}
+
+h2 {
+  color: #EBE9E9;
+  margin: 0 0 20px;
+  font-family: 'Tahoma', sans-serif;
+  text-align: center;
+}
+
+/* two-column layout */
+.container {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* controls on the left */
+#controls {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 2rem;
+  margin-top: 5rem;
+  flex:1;
+  
+}
+
+#namesInput {
+  width: 100%;
+  height: 120px;
+  resize: vertical;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  background: #EBE9E9;
+  color: #424242;
+  border: 1px solid #666;
+  font-family: 'Tahoma', sans-serif;
+  border-radius: 10px;
+}
+
+
+#fileInput {
+  width: 50%;
+  margin-left: 25%;
+  font-family: 'Tahoma', sans-serif;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: #EBE9E9; 
+  color: #424242;
+}
+
+#generateBtn {
+	display: block;
+	background: #aed8e6;
+	color: #424242;
+	font-weight: bold;
+	font-size: 150%;
+	font-family: 'Tahoma', sans-serif;
+	padding: 1rem;
+	width: 100%;
+	margin: 0.5rem 0;
+	border-radius: 10px;
+	border: 3px solid #c9f2f6;
+	}
+
+#resetBtn {
+	display: block;
+	font-family: 'Tahoma', sans-serif;
+	padding: 0.2rem;
+	width: 100%;
+	border-radius: 10px;
+	border: 3px solid #e6afaf;
+}
+
+/* grid section on the right */
+.grid-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Tahoma', sans-serif;
+}
+.grid-section h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* wrapper to let grid fill remaining height */
+.grid-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* the grid itself is a square filling available height */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 5px;
+  height: 100%;           /* fill the wrapper's height */
+  aspect-ratio: 1 / 1;    /* force square container */
+  font-family: 'Tahoma', sans-serif;
+}
+
+/* seats */
+.seat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  font-family: 'Tahoma', sans-serif;
+}
+
+.seat.inactive {
+  background: #a2a2a2;
+  border: 1px solid #ccc;
+  color: #999;
+  font-family: 'Tahoma', sans-serif;
+}
+.seat.active {
+  background: #aed8e6;
+  border: 2px solid #EBE9E9;
+  color: #424242;
+  font-family: 'Tahoma', sans-serif;
+}
+
+a {
+  color: #c9f2f6;           
+  text-decoration: none;    
+  font-weight: bold;        
+  transition: color .2s;    
+}
+
+a:hover {
+  color: #bdd7e0;
+  text-decoration: underline;
+}
+
+#saveLinkContainer {
+	text-align: center;
+}
