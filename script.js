@@ -28,7 +28,7 @@ document.getElementById('fileInput').addEventListener('change', e => {
 function generateGroups() {
   const names = document.getElementById('namesInput').value
     .trim().split('\n').filter(n => n);
-  const n = parseInt(document.getElementById('groupInput').value, 10);
+  const n = parseInt(document.getElementById('groupSize').value, 10);
   const mode = document.querySelector('input[name="mode"]:checked').value;
   const out = document.getElementById('output');
   const saveContainer = document.getElementById('saveLinkContainer');

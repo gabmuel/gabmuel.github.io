@@ -12,27 +12,24 @@
 
 <body>
   <h1>Group Generator</h1>
-  <div class="parent">
-	
-    <div class="left-container">
-      
-      <!-- upload .txt -->
-		<button onclick="generateGroups()">Generate Groups</button>
-		<div class="center-wrapper">
-		  <label><input type="radio" name="mode" value="size" checked>People per group (min.)</label>
-		  <label><input type="radio" name="mode" value="count">Number of groups</label>
-		  <input type="number" id="groupInput" placeholder="Enter a number" value="2" min="1"/>
+	<div class="parent">
+		<div class="left-container">
+			<button onclick="generateGroups()">Generate Groups</button>
+			<div class="group-types">
+			  <label><input type="radio" name="mode" value="size" checked>People per group (min.)</label>
+			  <label><input type="radio" name="mode" value="count">Number of groups</label>
+			  <input type="number" id="groupSize" placeholder="Enter a number" value="2" min="1"/>
+			</div>
+			<h4>list of names</h4>
+			<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
+			<input type="file" id="fileInput" accept=".txt" />
+			<div id="saveLinkContainer"></div>
 		</div>
-		<input type="file" id="fileInput" accept=".txt" />
-		<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
-		<div id="saveLinkContainer"></div>
-    </div>
-
-    <div class="right-container">
-      <h3>Groups:</h3>
-      <div id="output"></div>
-    </div>
-  </div>
+		<div class="right-container">
+		  <h2>Groups:</h2>
+		  <div id="output"></div>  
+		</div>
+	</div>
   <script src="script.js"></script>
 </body>
 </html>
