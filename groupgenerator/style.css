@@ -24,7 +24,7 @@ h2 {
 
 h4 {
 	text-align: center;
-	margin-top: 2rem;
+	margin-top: 3rem;
 }
 
 
@@ -52,13 +52,13 @@ h4 {
 }
 
 .group-types {
-  max-width: 90%;
+  max-width: 85%;
   margin-left: 5%;
   text-align: center;
   display: flex;
-  border-radius: 10px;
+  border-radius: 3px;
   background: #EBE9E9;
-  padding: 3px;
+  padding: 10px;
 }
 
 label{
