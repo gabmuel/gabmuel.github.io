@@ -12,24 +12,37 @@
 </head>
 
 <body>
-  <h1>Group Generator</h1>
-	<div class="parent">
-		<div class="left-container">
-			<button onclick="generateGroups()">Generate Groups</button>
-			<div class="group-types">
-			  <label><input type="radio" name="mode" value="size" checked>People per group (min.)</label>
-			  <label><input type="radio" name="mode" value="count">Number of groups</label>
-			  <input type="number" id="groupSize" placeholder="Enter a number" value="2" min="1"/>
+	
+	<header class="site-header">
+	  
+	  <nav class="dropdown-menu">
+		<button class="menu-btn" aria-haspopup="true" aria-expanded="false">☰ Menu</button>
+		<div class="menu-items" role="menu">
+		  <a href="/" role="menuitem">Home</a>
+		  <a href="/group/" role="menuitem">Group Generator</a>
+		  <a href="/seating/" role="menuitem">Seating Generator</a>
+		</div>
+	  </nav>
+	  <h1>Group Generator</h1>
+	</header>
+	
+		<div class="parent">
+			<div class="left-container">
+				<button id="generateBtn" onclick="generateGroups()">Generate Groups</button>
+				<div class="group-types">
+				<label><input type="radio" name="mode" value="size" checked>People per group (min.)</label>
+				<label><input type="radio" name="mode" value="count">Number of groups</label>
+				<input type="number" id="groupSize" placeholder="Enter a number" value="2" min="1"/>
+				</div>
+				<h4>list of names</h4>
+				<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
+				<input type="file" id="fileInput" accept=".txt" />
+				<div id="saveLinkContainer"></div>
 			</div>
-			<h4>list of names</h4>
-			<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
-			<input type="file" id="fileInput" accept=".txt" />
-			<div id="saveLinkContainer"></div>
+			<div class="right-container">
+				<h2>Groups:</h2>
+				<div id="output"></div>  
+			</div>
 		</div>
-		<div class="right-container">
-		  <h2>Groups:</h2>
-		  <div id="output"></div>  
-		</div>
-	</div>
 </body>
 </html>

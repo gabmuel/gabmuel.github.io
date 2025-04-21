@@ -1,0 +1,74 @@
+/* style.css */
+html, body {
+  height: 100%;
+  margin: 5;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Tahoma', sans-serif;
+  color: #EBE9E9;
+  background: #424242;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #EBE9E9;
+  margin: 0 0 20px;
+  font-family: 'Tahoma', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #424242;
+  margin: 0 0 20px;
+  font-family: 'Tahoma', sans-serif;
+  text-align: center;
+  background: #aed8e6;
+  padding: 5px;
+}
+
+h4 {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+
+.link-container{
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 1rem;
+	background: #EBE9E9;
+	border-radius: 20pt;
+	padding: 2rem;
+}
+
+a {
+	text-align: center;
+	color: #424242;           
+	text-decoration: none;    
+	font-weight: bold;
+	font-size: 20pt;
+	transition: color .2s;
+	gap: 1rem;
+}
+
+a:hover {
+  color: #aed8e6;
+}
+
+/*.background-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://bitord2gzq5flxo6okyadrirhqbg3jzzgauaixwtv34bt7ddpasq.arweave.net/Ciboj0bMOlXd3nKwAcURPAJtpzkwKARe0674GfxjeCU.jpg") center/cover no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}*/
