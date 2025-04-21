@@ -17,15 +17,14 @@
     <div class="left-container">
       
       <!-- upload .txt -->
-		<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
-		<input type="file" id="fileInput" accept=".txt" />
+		<button onclick="generateGroups()">Generate Groups</button>
 		<div class="center-wrapper">
 		  <label><input type="radio" name="mode" value="size" checked>People per group (min.)</label>
 		  <label><input type="radio" name="mode" value="count">Number of groups</label>
+		  <input type="number" id="groupInput" placeholder="Enter a number" value="2" min="1"/>
 		</div>
-		<input type="number" id="groupInput" placeholder="Enter a number" />
-
-		<button onclick="generateGroups()">Generate Groups</button>
+		<input type="file" id="fileInput" accept=".txt" />
+		<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
 		<div id="saveLinkContainer"></div>
     </div>
 
