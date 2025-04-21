@@ -1,3 +1,17 @@
+// on page load: decode “data” param into textarea
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(location.search);
+  const data = params.get('data');
+  if (data) {
+    try {
+      const names = JSON.parse(atob(decodeURIComponent(data)));
+      document.getElementById('namesInput').value = names.join('\n');
+    } catch (e) {
+      console.error('Failed to parse data:', e);
+    }
+  }
+});
+
 // read uploaded .txt into textarea
 document.getElementById('fileInput').addEventListener('change', e => {
   const file = e.target.files[0];
@@ -21,21 +35,16 @@ function generateGroups() {
     return;
   }
 
-  // shuffle
+  // shuffle & build
   const shuffled = names.sort(() => Math.random() - 0.5);
   let groups = [];
-
   if (mode === 'size') {
     const k = Math.floor(shuffled.length / n) || 1;
     groups = Array.from({ length: k }, () => []);
-    shuffled.forEach((name, i) => {
-      groups[i % k].push(name);
-    });
+    shuffled.forEach((name, i) => groups[i % k].push(name));
   } else {
     groups = Array.from({ length: n }, () => []);
-    shuffled.forEach((name, i) => {
-      groups[i % n].push(name);
-    });
+    shuffled.forEach((name, i) => groups[i % n].push(name));
   }
 
   // display groups
@@ -43,7 +52,7 @@ function generateGroups() {
     .map((g, i) => `<p><strong>Group ${i + 1}:</strong> ${g.join(', ')}</p>`)
     .join('');
 
-  // create opaque (base64) link with original names
+  // opaque link with original names
   const encoded = btoa(JSON.stringify(names));
   const url = `${location.origin + location.pathname}?data=${encodeURIComponent(encoded)}`;
   out.insertAdjacentHTML(
