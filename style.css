@@ -2,7 +2,7 @@
 body {
   font-family: Roboto Condensed, sans-serif;
   color: #EBE9E9;
-  background: #424040;
+  background: #424242;
   margin: 2rem;
 }
 
@@ -34,7 +34,7 @@ textarea{
   margin: 0.5rem 0;
   padding: 0.5rem;
   font-family: Roboto Condensed, sans-serif;
-  color: #424040;
+  color: #424242;
   border-radius: 10px;
 }
 
@@ -44,7 +44,7 @@ label{
   padding: 0.5rem;
   border-radius: 20px;
   background: #EBE9E9; 
-  color: #424040;
+  color: #424242;
 }
 
 input{
@@ -55,13 +55,13 @@ input{
 	font-family: Roboto Condensed, sans-serif;
 	border-radius: 20px;
 	background: #EBE9E9; 
-	color: #424040;
+	color: #424242;
 }
 
 button {
 	display: block;
 	background: #aed8e6;
-	color: #424040;
+	color: #424242;
 	font-weight: bold;
 	font-size: 150%;
 	font-family: Roboto Condensed, sans-serif;
