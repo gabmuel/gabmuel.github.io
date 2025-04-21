@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Tools</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="parent">
+    <div class="left-container">
+      <h1>Group Generator</h1>
+
+      <!-- upload .txt -->
+		<label for="fileInput">Upload names (.txt):</label>
+		<input type="file" id="fileInput" accept=".txt" />
+
+		<textarea id="namesInput" placeholder="Enter names, one per line"></textarea>
+
+		<div class="center-wrapper">
+		  <label><input type="radio" name="mode" value="size" checked>People per group (min.)</label>
+		  <label><input type="radio" name="mode" value="count">Number of groups</label>
+		</div>
+		<input type="number" id="groupInput" placeholder="Enter a number" />
+
+		<button onclick="generateGroups()">Generate</button>
+    </div>
+
+    <div class="right-container">
+      <h3>Groups:</h3>
+      <div id="output"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
