@@ -1,3 +1,5 @@
+// script.js
+
 // on page load: decode “data” param into textarea
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(location.search);
@@ -29,13 +31,15 @@ function generateGroups() {
   const n = parseInt(document.getElementById('groupInput').value, 10);
   const mode = document.querySelector('input[name="mode"]:checked').value;
   const out = document.getElementById('output');
+  const saveContainer = document.getElementById('saveLinkContainer');
 
   if (!names.length || !n || n <= 0) {
     out.innerText = 'Enter valid names and a number.';
+    saveContainer.innerHTML = '';
     return;
   }
 
-  // shuffle & build
+  // shuffle & build groups
   const shuffled = names.sort(() => Math.random() - 0.5);
   let groups = [];
   if (mode === 'size') {
@@ -52,11 +56,8 @@ function generateGroups() {
     .map((g, i) => `<p><strong>Group ${i + 1}:</strong> ${g.join(', ')}</p>`)
     .join('');
 
-  // opaque link with original names
+  // create opaque (base64) link with original names
   const encoded = btoa(JSON.stringify(names));
   const url = `${location.origin + location.pathname}?data=${encodeURIComponent(encoded)}`;
-  out.insertAdjacentHTML(
-    'beforeend',
-    `<p><a href="${url}" target="_blank">Save names</a></p>`
-  );
+  saveContainer.innerHTML = `<p><a href="${url}" target="_blank">Save names (opaque link)</a></p>`;
 }
