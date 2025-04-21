@@ -123,19 +123,28 @@ textarea{
 }
 
 #generateBtn {
-	display: block;
 	background: #aed8e6;
 	color: #424242;
-	font-weight: bold;
-	font-size: 150%;
-	font-family: 'Tahoma', sans-serif;
-	padding: 1rem;
-	width: 100%;
-	margin: 0.5rem 0;
-	border-radius: 10px;
 	border: 3px solid #c9f2f6;
+	border-radius: 10px;
+	padding: 1rem;
+	font-size: 150%;
+	cursor: pointer;
+	transition: background‐color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+	margin: 1rem 0;
 	}
 
+#generateBtn:hover {
+  background: #c0e4ec;            /* a slightly lighter shade */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#generateBtn:active {
+  background: #99cfd8;            /* slightly darker */
+  transform: translateY(0);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
 
 #saveLinkContainer {
 	text-align: center;
