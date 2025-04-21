@@ -38,6 +38,7 @@ h1, h2, h3 {
   font-size: 200%;
   color: #424040;
   border-radius: 10px;
+  text-align: center;
 }
 
 textarea, input, button {
@@ -56,9 +57,7 @@ button {
 	font-size: 150%;
 	padding: 1rem;
 	width: 105%;
-	
-	
-}
+	}
 
 #groupInput {
   display: block;
