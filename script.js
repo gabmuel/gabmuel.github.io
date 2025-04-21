@@ -59,5 +59,5 @@ function generateGroups() {
   // create opaque (base64) link with original names
   const encoded = btoa(JSON.stringify(names));
   const url = `${location.origin + location.pathname}?data=${encodeURIComponent(encoded)}`;
-  saveContainer.innerHTML = `<p><a href="${url}" target="_blank">Save names (opaque link)</a></p>`;
+  saveContainer.innerHTML = `<p><a href="${url}" target="_blank">Save list as link</a></p>`;
 }
