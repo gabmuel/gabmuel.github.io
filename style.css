@@ -24,24 +24,11 @@ h1, h2, h3 {
 .left-container {
   max-width: 400px;
   margin: 2rem;
+  margin-top: 5rem;
   flex: 1;
 }
 
-#output {
-  width: 100%;
-  max-width: none;
-  margin-left: 0;
-  background: #EBE9E9;
-  padding: 2rem;
-  border: 1px solid #ddd;
-  font-family: Roboto Condensed, sans-serif;
-  font-size: 200%;
-  color: #424040;
-  border-radius: 10px;
-  text-align: center;
-}
-
-textarea, input, button {
+textarea{
   display: block;
   width: 100%;
   margin: 0.5rem 0;
@@ -51,12 +38,38 @@ textarea, input, button {
   border-radius: 10px;
 }
 
+label{
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background: #EBE9E9; 
+  color: #424040;
+}
+
+input{
+	display: block;
+	width: 100%;
+	margin: 0.5rem 0;
+	padding: 0.5rem;
+	font-family: Roboto Condensed, sans-serif;
+	border-radius: 20px;
+	background: #EBE9E9; 
+	color: #424040;
+}
+
 button {
+	display: block;
 	background: #aed8e6;
+	color: #424040;
 	font-weight: bold;
 	font-size: 150%;
+	font-family: Roboto Condensed, sans-serif;
 	padding: 1rem;
 	width: 105%;
+	margin: 0.5rem 0;
+	border-radius: 10px;
+	border: 3px solid #c9f2f6;
 	}
 
 #groupInput {
@@ -68,6 +81,21 @@ button {
   color: #424040;
   border-radius: 10px;
 }
+
+#output {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  background: #EBE9E9;
+  padding: 2rem;
+  border: 15px solid #aed8e6;
+  border-radius: 10px;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 200%;
+  color: #424040;
+  text-align: center;
+}
+
 
 /*.background-overlay {
   position: fixed;
@@ -82,20 +110,10 @@ button {
 
 .center-wrapper {
   text-align: center;
- 
-}
-label, input {
-  display: inline-block;
-  vertical-align: middle;
-  padding: 0.5rem;
-  border: 1px solid #EBE9E9;
-  border-radius: 20px;
-  background: #EBE9E9; 
-  color: #424040;
 }
 
 a {
-  color: #8ec9de;           
+  color: #c9f2f6;           
   text-decoration: none;    
   font-weight: bold;        
   transition: color .2s;    
