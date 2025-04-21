@@ -16,12 +16,30 @@ h1, h2, h3 {
 	gap: 1rem;
 }
 
-.left-container, .right-container {
-  max-width: 500px;
-  margin: auto;
+.right-container {
+  max-width: 1200px;
+  margin: 2rem;
   flex: 1;
-  
-  
+}
+.left-container {
+  max-width: 400px;
+  margin: 2rem;
+  flex: 1;
+}
+
+#output {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  background: #EBE9E9;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 200%;
+  color: #424040;
+  border-radius: 10px;
+}
+
 textarea, input, button {
   display: block;
   width: 100%;
@@ -35,6 +53,11 @@ textarea, input, button {
 button {
 	background: #aed8e6;
 	font-weight: bold;
+	font-size: 150%;
+	padding: 1rem;
+	width: 105%;
+	
+	
 }
 
 #groupInput {
@@ -65,24 +88,21 @@ button {
 label, input {
   display: inline-block;
   vertical-align: middle;
-   padding: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid #EBE9E9;
   border-radius: 20px;
   background: #EBE9E9; 
   color: #424040;
 }
 
+a {
+  color: #8ec9de;           
+  text-decoration: none;    
+  font-weight: bold;        
+  transition: color .2s;    
+}
 
-#output {
-  margin-top: 1rem;
-  margin-left: -25%;
-  background: #EBE9E9;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  font-family: Roboto Condensed, sans-serif;
-  font-size: 18pt;
-  color: #424040;
-  width: 150%;
-  max-width: none;
-  border-radius: 10px;
+a:hover {
+  color: #bdd7e0;
+  text-decoration: underline;
 }
