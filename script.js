@@ -57,6 +57,6 @@ function generateGroups() {
   const url = `${location.origin + location.pathname}?data=${encodeURIComponent(encoded)}`;
   out.insertAdjacentHTML(
     'beforeend',
-    `<p><a href="${url}" target="_blank">Save names (opaque link)</a></p>`
+    `<p><a href="${url}" target="_blank">Save names</a></p>`
   );
 }
