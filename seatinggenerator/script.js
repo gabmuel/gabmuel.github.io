@@ -92,7 +92,7 @@ generateBtn.addEventListener('click', () => {
   const payload = { names, seats: seatsState };
   const encoded = btoa(JSON.stringify(payload));
   const url = `${location.origin + location.pathname}?data=${encodeURIComponent(encoded)}`;
-  saveContainer.innerHTML = `<p><a href="${url}" target="_blank">Save layout & names (link)</a></p>`;
+  saveContainer.innerHTML = `<p><a href="${url}" target="_blank">Save list and desk selection as link</a></p>`;
 });
 
 // reset
